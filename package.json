@@ -12,6 +12,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "mongodb": "^6.17.0",
     "node": "^22.16.0"
   }
 }
