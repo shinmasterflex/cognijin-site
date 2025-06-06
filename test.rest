@@ -1,0 +1,3 @@
+### TEST GET / website
+GET http://localhost:10000
+

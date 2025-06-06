@@ -27,7 +27,7 @@ body {
 /* Header */
 header h1 {
   text-align: center;
-  color: rgb(0, 173, 216)
+  color: rgb(0, 173, 216);
   margin-bottom: 30px;
 }
 
@@ -57,7 +57,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: rgb(0, 173, 216)
+  color: rgb(0, 173, 216);
   margin-bottom: 20px;
 }
 

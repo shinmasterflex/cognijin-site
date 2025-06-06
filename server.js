@@ -43,7 +43,7 @@ app.post('/contact', async (req, res) => {
 });
 
 // Serve index.html for unmatched routes
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
