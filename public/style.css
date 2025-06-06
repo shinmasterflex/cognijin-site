@@ -6,6 +6,10 @@ body {
   color: #333;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 div {
   display: block;
 }
@@ -24,7 +28,7 @@ div {
 /* Logo */
 .logo {
   height: 80px;
-  max-width:"100%";
+  max-width:100%;
   margin: 0px auto;
 }
 
@@ -38,7 +42,7 @@ div {
 .slogan {
   align-self: center;
   align-items: center;
-  font-size: clamp(0.5rem, calc(1vw + 0.1rem), 1.25rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 /* Header */
@@ -62,19 +66,15 @@ header {
 
 form label {
   margin-bottom: 5px;
-  margin-left: auto;
   text-align: left;
   font-weight: bold;
 }
 
 form input,
 form textarea {
-  width: 700px;
-  max-width: 100%;
+  width: 100%;
   padding: min(10px, 6%);
-  align-self: center;
   margin-bottom: 20px;
-  margin-left:auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
@@ -98,15 +98,37 @@ form button:hover {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 300px) {
   .container {
     margin: 40px 10px;
     padding: 5px;
   }
 
-  form label,
-  form input,
+  .slogan {
+    font-size: 1.2rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-left: 0;
+  }
+  
   form textarea {
-    margin-left: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  form button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  form label {
+    width: 100%;
+    margin-left: 0;
   }
 }
