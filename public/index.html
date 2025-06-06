@@ -9,32 +9,48 @@
 <body>
   <div class="container">
     <header>
-      <img src="/logo.png" alt="Company Logo" class="logo"/>
-      <h1> </h1>
+      <div>
+        <img src="Logo.png" alt="Company Logo" class="logo"/>
+      </div>
+
+      <div>
+          <span class="slogan">AI-enabled tools and services to allow you to focus on your mission</span>
+      </div>
+
+      <br>
+
     </header>
 
-    <section class="about">
-      <h2> </h2>
-      <p> We equip you with AI-enabled tools and services to allow you to focus on your mission. </p>
-
-    </section>
-
     <section class="contact-form">
-      <h2 style="text-align: center">Contact Us</h2>
       <form id="contactForm" method="POST" action="/contact">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name"/>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email"/>
+        <div class = "field_firstname">
+          <label id = "label_firstname" for="first name">First Name</label>
+          <input type="text" id="first name" name="name" aria-labelledby="label_firstname"/>
+        </div>
+        
+        <div class = "field_lastname">
+          <label id = "label_lastname" for="last name">Last Name</label>
+          <input type="text" id="last name" name="name" aria-labelledby="label_lastname"/>
+        </div>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone"/>
+        <div class = "field_email">
+          <label id = "label_email" for="email">Email</label>
+          <input type="email" id="email" name="email" aria-labelledby="label_email"/>
+        </div>        
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5"></textarea>
+        <div>
+          <label id = "label_phone" for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" aria-labelledby="label_phone"/>
+        </div>
 
-        <button type="submit">Send Message</button>
+        <div>
+          <label id = "label_message" for="message">Message</label>
+          <textarea id="message" name="message" rows="5"  aria-labelledby="label_message"></textarea>
+        </div>
+        
+        <button type="submit">Submit Request</button>
+
       </form>
     </section>
     
