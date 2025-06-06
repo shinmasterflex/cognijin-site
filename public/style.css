@@ -70,26 +70,43 @@ form label {
 
 form input,
 form textarea {
-  width: 700px;
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 form button {
-  align-self: center;
-  width: 400px;
-  padding: 12px;
-  background-color: rgb(34, 200, 242);
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  align-self: center;
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  background-color: rgb(34, 200, 242);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 form button:hover {
   background-color: rgb(34, 200, 242);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 40px 10px;
+    padding: 15px;
+  }
+
+  form label,
+  form input,
+  form textarea {
+    margin-left: 0;
+  }
 }
