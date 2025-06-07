@@ -16,8 +16,10 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Mongoose Schema and Model
 const contactSchema = new mongoose.Schema({
-  name: String,
+  first_name: String,
+  last_name: String,
   email: String,
+  phone: String,
   message: String,
   createdAt: { type: Date, default: Date.now }
 });
