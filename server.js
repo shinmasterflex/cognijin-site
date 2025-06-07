@@ -34,6 +34,7 @@ app.use(bodyParser.json());
 // Handle contact form POST
 app.post('/contact', async (req, res) => {
   const { first_name, last_name, email, phone, message } = req.body;
+   console.log('Form submitted:', req.body);
   try {
     const newContact = new Contact({ first_name, last_name, email, phone, message });
     await newContact.save();
@@ -49,6 +50,3 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
