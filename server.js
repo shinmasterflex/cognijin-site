@@ -37,7 +37,7 @@ app.post('/contact', async (req, res) => {
   try {
     const newContact = new Contact({ first_name, last_name, email, phone, message });
     await newContact.save();
-    res.redirect('/thank-you');
+    res.redirect('thank-you.html');
   } catch (err) {
     console.error('Error saving contact:', err);
     res.status(500).send('Something went wrong.');
@@ -49,3 +49,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
