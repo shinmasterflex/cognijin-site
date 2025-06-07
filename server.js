@@ -31,9 +31,9 @@ app.use(bodyParser.json());
 
 // Handle contact form POST
 app.post('/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { first_name, last_name, email, phone, message } = req.body;
   try {
-    const newContact = new Contact({ name, email, message });
+    const newContact = new Contact({ first_name, last_name, email, phone, message });
     await newContact.save();
     res.send('Your message was received. Thank you!');
   } catch (err) {
