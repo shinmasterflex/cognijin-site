@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-app.use(express.json());
 
 require('dotenv').config();
 
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 10000;
 
 // MongoDB connection
