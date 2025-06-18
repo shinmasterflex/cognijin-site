@@ -3,46 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
     <header>
       <div>
-        <img src="Logo.png" alt="Company Logo" class="logo"/>
+        <a href="index.html">
+          <img src="Logo.png" alt="Company Logo" class="logo"/>
+        </a>
       </div>
-
       <div>
-          <span class="slogan">AI-based tools and services to focus on your mission</span>
+        <span class="slogan">AI tools and services designed for your mission</span>
       </div>
-
       <br>
-
     </header>
 
-    <section class="contact-form">
-      <form id="contactForm" method="POST" action="/contact">
-
-        <label id = "label_firstname" for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name"/>      
-
-        <label id = "label_lastname" for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name"/>
-
-        <label id = "label_email" for="email">Email</label>
-        <input type="email" id="email" name="email"/>
-
-        <label id = "label_phone" for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone"/>
-
-        <label id = "label_message" for="message">Message</label>
-        <textarea id="message" name="message" rows="5"></textarea>
-
-        <button type="submit">Submit Request</button>
-
-      </form>
-    </section>
+    <div class="triangle-container">
+      <a href="/contact.html" class="dot-link dot top"><div class="dot">Let's Connect</div></a>
+      <a href="/FAQ.html" class="dot-link dot left"><div class="dot">FAQ</div></a>
+      <a href="/payments.html" class="dot-link dot right"><div class="dot">Payments</div></a>
+    </div>
     
   </div>
 </body>

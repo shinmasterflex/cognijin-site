@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <a href="index.html">
+          <img src="Logo.png" alt="Company Logo" class="logo"/>
+        </a>
+      </div>
+      <div>
+        <span class="slogan">AI tools and services designed for your mission</span>
+      </div>
+      <br>
+    </header>
+  
+
+    <div class="payment-container">
+      <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+      </script>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RbBFAGmB34AniOzjwZP99yf"
+        publishable-key="pk_live_51Ra5UZGmB34AniOzf1NVGO8rp6UGuyZ2phSznOCQ6twT9mBVsVZf0Mfij9W6gVO7P8jDQUVylhBmjlkXft2G61Cz00G0BTFUII"
+      >
+      </stripe-buy-button>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RbB3rGmB34AniOzOeUD6KSo"
+        publishable-key="pk_live_51Ra5UZGmB34AniOzf1NVGO8rp6UGuyZ2phSznOCQ6twT9mBVsVZf0Mfij9W6gVO7P8jDQUVylhBmjlkXft2G61Cz00G0BTFUII"
+      >
+      </stripe-buy-button>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RbBduGmB34AniOzxW1ERGjM"
+        publishable-key="pk_live_51Ra5UZGmB34AniOzf1NVGO8rp6UGuyZ2phSznOCQ6twT9mBVsVZf0Mfij9W6gVO7P8jDQUVylhBmjlkXft2G61Cz00G0BTFUII"
+      >
+      </stripe-buy-button>
+      
+    </div>
+  </div>
+  
+
+</body>
+</html>
