@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         <img src={Logo} alt="Cognijin Logo" className="h-96 w-auto max-w-none mb-8" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex flex-col items-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white-text leading-tight mb-4">
             AI Transformation for Your Business.

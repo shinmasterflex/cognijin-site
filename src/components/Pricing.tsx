@@ -49,7 +49,7 @@ const pricingTiers = [
 const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="py-20 bg-dark-bg">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white-text">Flexible Pricing for Teams of All Sizes</h2>
           <p className="text-lg text-light-text mt-4">Choose the plan that's right for you.</p>

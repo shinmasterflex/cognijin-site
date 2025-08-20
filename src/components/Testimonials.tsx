@@ -24,7 +24,7 @@ const testimonialsData = [
 const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className="py-20 bg-dark-card border-y border-dark-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white-text">What Our Partners Say</h2>
           <p className="text-lg text-light-text mt-4 max-w-2xl mx-auto">

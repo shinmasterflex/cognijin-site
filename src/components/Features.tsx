@@ -4,17 +4,17 @@ import { FeatureIcon1, FeatureIcon2, FeatureIcon3 } from './Icons';
 
 const servicesData = [
   {
-  icon: <FeatureIcon1 className="h-2 w-2 text-accent" />,
+  icon: <FeatureIcon1 className="h-10 w-10 text-accent" />,
     title: 'AI Strategy & Consulting',
     description: 'Our experts help you identify opportunities for AI integration, creating a roadmap for successful implementation and digital transformation.',
   },
   {
-  icon: <FeatureIcon2 className="h-3 w-3 text-accent" />,
+  icon: <FeatureIcon2 className="h-10 w-10 text-accent" />,
     title: 'Custom AI Development',
     description: 'We build bespoke AI models and solutions tailored to your unique business needs, from natural language processing to computer vision.',
   },
   {
-  icon: <FeatureIcon3 className="h-3 w-3 text-accent" />,
+  icon: <FeatureIcon3 className="h-10 w-10 text-accent" />,
     title: 'AI-Powered Automation',
     description: 'We automate your workflows and processes using intelligent systems, increasing efficiency and reducing operational costs.',
   },
@@ -23,7 +23,7 @@ const servicesData = [
 const Features: React.FC = () => {
   return (
     <section id="services" className="py-20 bg-dark-card border-y border-dark-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white-text">Our AI Services</h2>
           <p className="text-lg text-light-text mt-4 max-w-2xl mx-auto">
