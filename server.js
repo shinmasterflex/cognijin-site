@@ -1,13 +1,21 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 
-require('dotenv').config();
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 10000;
+
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
@@ -15,6 +23,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
+
 
 // Mongoose Schema and Model
 const contactSchema = new mongoose.Schema({
@@ -29,10 +38,12 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', contactSchema);
 
 
+
 // Middleware
 app.use(express.static(path.join(__dirname, '../dist')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 
 // Handle contact form POST
 app.post('/contact', async (req, res) => {
@@ -48,10 +59,12 @@ app.post('/contact', async (req, res) => {
 });
 
 
+
 // Serve index.html from dist for all unmatched routes (SPA support)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
