@@ -40,7 +40,7 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 
 // Middleware
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -62,7 +62,7 @@ app.post('/contact', async (req, res) => {
 
 // Serve index.html from dist for all unmatched routes (SPA support)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 
