@@ -1,14 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="/assets/index-Gvbj03Af.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Dtn62Xmo.css">
-  </head>
-  <body>
+    <title>Cognijin - AI Transformation for Your Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-bg': '#0D1117',
+              'dark-card': '#161B22',
+              'dark-border': '#30363D',
+              'light-text': '#C9D1D9',
+              'white-text': '#F0F6FC',
+              'accent-blue': '#00AEEF',
+              'accent-purple': '#5F2A8A',
+              'accent': '#00AEEF',
+              'accent-hover': '#0095c7',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'subtle-shine': 'subtleShine 2s infinite alternate',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              subtleShine: {
+                '0%': { 'box-shadow': '0 0 5px 0px rgba(0, 174, 239, 0.3)' },
+                '100%': { 'box-shadow': '0 0 15px 3px rgba(0, 174, 239, 0.4)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-B0lDVoaK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dtn62Xmo.css">
+</head>
+  <body class="bg-dark-bg">
     <div id="root"></div>
   </body>
 </html>
