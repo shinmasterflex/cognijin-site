@@ -45,6 +45,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
+
 // Handle contact form POST
 app.post('/contact', async (req, res) => {
   const { first_name, last_name, email, phone, message } = req.body;
@@ -58,9 +59,11 @@ app.post('/contact', async (req, res) => {
   }
 });
 
+// Server-side routing for main and consultation pages
+app.get('/consultation', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'consultation.html'));
+});
 
-
-// Serve index.html from dist for all unmatched routes (SPA support)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
