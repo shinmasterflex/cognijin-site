@@ -28,12 +28,32 @@ const ConsultationPage: React.FC = () => {
             return;
         }
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    company,
+                    email,
+                    phone,
+                    message,
+                }),
+            });
 
-        // In a real app, you would handle API errors here.
-        // For this example, we'll assume it's always successful.
-        setStatus('success');
+            if (response.ok) {
+                setStatus('success');
+            } else {
+                const text = await response.text();
+                setErrorMessage('Submission failed: ' + text);
+                setStatus('error');
+            }
+        } catch (err) {
+            setErrorMessage('Submission failed. Please try again later.');
+            setStatus('error');
+        }
     };
 
     if (status === 'success') {

@@ -2,13 +2,13 @@ import React from 'react';
 import Logo from '../Logo.svg';
 
 const Hero: React.FC = () => {
-  
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     e.preventDefault();
     if (window.location.hash !== hash) {
       window.location.hash = hash;
     }
   };
+  
 
   return (
     <section className="py-20 md:py-32 bg-dark-bg">

@@ -13,6 +13,12 @@ const CTASection: React.FC = () => {
           </p>
           <a
             href="#consultation"
+            onClick={e => {
+              e.preventDefault();
+              if (window.location.hash !== '#consultation') {
+                window.location.hash = '#consultation';
+              }
+            }}
             className="inline-block px-8 py-4 bg-accent text-white-text font-semibold rounded-md hover:bg-accent-hover transition-colors text-lg"
           >
             Book a Free Consultation

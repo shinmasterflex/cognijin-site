@@ -28,8 +28,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Schema & model
 const contactSchema = new mongoose.Schema({
-  first_name: String,
-  last_name: String,
+  name: String,
+  company: String,
   email: String,
   phone: String,
   message: String,
@@ -40,14 +40,12 @@ const Contact = mongoose.model('Contact', contactSchema);
 // Handle contact form POST (single route!)
 app.post('/contact', async (req, res) => {
   try {
-    console.log('Received /contact POST body:', req.body);
 
-    const { first_name, last_name, email, phone, message } = req.body;
+    const { name, company, email, phone, message } = req.body;
 
-    const newContact = new Contact({ first_name, last_name, email, phone, message });
-    await newContact.save();
+    const newContact = new Contact({ name, company, email, phone, message });
+    const savedContact = await newContact.save();
 
-    console.log('Contact saved with _id:', newContact._id);
     // Ensure absolute path so it resolves under /
     res.redirect('/thank-you.html');
   } catch (err) {
